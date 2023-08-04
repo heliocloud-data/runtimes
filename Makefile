@@ -39,8 +39,8 @@ helio-notebook-mltrch-build:
 	docker build -t heliocloud/helio-notebook-mltrch:dev .;
 
 .PHONY: helio-notebook-mltrch-test
-helio-notebook-mltrch-test:
-	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-notebook-mltrch:dev ../../helio-notebook/docker-image/run_tests.sh helio-notebook-mltrch \
-	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-notebook-mltrch:dev ./run_tests.sh helio-notebook-mltrch
+helio-notebook-mltrch-test: 
+	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-notebook-mltrch:dev helio-notebook/docker-image/run_tests.sh helio-notebook; \
+	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-notebook-mltrch:dev helio-notebook-mltrch/docker-image/run_tests.sh helio-notebook-mltrch
 
 
