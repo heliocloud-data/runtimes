@@ -2,9 +2,9 @@
 
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 
-export HELIO_ENV="panhelio-notebook"
-if ! [[ -z "${PANHELIO_SCRATCH_PREFIX}" ]] && ! [[ -z "${JUPYTERHUB_USER}" ]]; then
-    export PANHELIO_SCRATCH="${PANHELIO_SCRATCH_PREFIX}/${JUPYTERHUB_USER}/"
+export HELIOCLOUD_ENV="helio-notebook"
+if ! [[ -z "${HELIOCLOUD_SCRATCH_PREFIX}" ]] && ! [[ -z "${JUPYTERHUB_USER}" ]]; then
+    export HELIOCLOUD_SCRATCH="${HELIOCLOUD_SCRATCH_PREFIX}/${JUPYTERHUB_USER}/"
 fi
 
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
