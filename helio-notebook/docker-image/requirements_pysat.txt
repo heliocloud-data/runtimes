@@ -1,0 +1,7 @@
+# extra pip-based requirements to install
+# which are not captured in conda-lock file
+-i https://test.pypi.org/simple/
+#pysatMissions==0.3.1
+#pysatNASA==0.0.3
+#pysatSeasons==0.2.0rc2
+#pysat==3.0.2rc0

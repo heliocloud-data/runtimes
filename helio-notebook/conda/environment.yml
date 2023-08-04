@@ -1,0 +1,69 @@
+name: helio-cloud-py
+channels:
+- conda-forge
+- nodefaults
+- astropy
+dependencies:
+- aiapy
+- astropy
+- awscli
+- cdflib
+- conda-lock
+- cython
+- drms
+- fastparquet
+- glob2 
+- html5lib
+- ipympl
+# this causes problems w/ jupyter lab build perhaps drop back to 0.6.0?
+#- ipyscales
+- jupyterhub-singleuser
+- keyring
+- nbgitpuller
+- nodejs
+- plasmapy
+- py-spy
+- pyhdf 
+- s3fs
+- setuptools<60.0
+- sunpy
+- sgp4
+- xlrd
+- xlwt
+- pip:
+    - aacgmv2 
+    - ai.cs
+    - apexpy
+    - asdf
+    - astroquery
+    - ccdproc
+    - geospacepy
+    - hapiclient
+    - hapiplot
+    - graphviz
+    - gwcs
+    - jupyter-offlinenotebook
+    - jupyterlab-s3-browser
+    - jupytext
+    - kamodo
+    - nbzip
+    - ocbpy
+    - OMMBV
+    - pfsspy[performance]
+    - photutils
+    - pysat
+    - pyspedas
+    - pysatCDF
+    - pysatCDAAC
+    - pyEphem
+    - pyForecastTools
+    - pysatMadrigal
+    - pysatSpaceWeather
+    - pysatSeasons
+    - spacepy
+    - speasy
+    - specutils>=1.1.1
+    - solarmach
+    - sunkit-image
+    - sunpy-soar
+    - viresclient
