@@ -6,6 +6,8 @@ import os
 packages = [
     # key packages
     'torch',  #'torchvision', 
+    'torch.cuda',
+    'torch.nn',
     'cv2'
     ]
 

@@ -24,7 +24,17 @@ packages = [
     # https://github.com/conda-forge/panhelio-notebook-feedstock/blob/master/recipe/meta.yaml
     'dask', 'distributed', 'dask_gateway', 'dask_labextension', 
     # jupyterhub and related utilities
-    'jupyterhub', 'jupyterlab', 'nbgitpuller'
+    'jupyterhub', 'jupyterlab', 'nbgitpuller',
+    # aws/storage stuff
+    's3fs', 'kerchunk', 'h5py', 'xarray', #, 'intake'
+    # pyhc core 
+    'hapiplot',
+    'kamodo',
+    'netCDF4',
+    'plasmapy',
+    'spacepy', 'sunpy',
+    #'pysat', #'pysatSeasons', 'pysatNASA', 'pysatMissions',
+    # key packages
     ]
 
 @pytest.mark.parametrize('package_name', packages, ids=packages)
