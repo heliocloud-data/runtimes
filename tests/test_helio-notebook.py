@@ -16,4 +16,4 @@ def test_import(package_name):
 def test_start():
     print(os.environ)
     if os.environ.get('HELIOCLOUD_ENV') is not None:
-        assert os.environ['HELIOCLOUD_ENV'] == 'helio-notebook-py'
+        assert os.environ['HELIOCLOUD_ENV'] == 'helio-notebook'
