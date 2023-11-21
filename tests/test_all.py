@@ -7,6 +7,7 @@ def test_config_paths():
     assert os.path.exists('/etc/profile.d/init_conda.sh')
     assert os.path.exists('/srv/conda/.condarc')
     assert os.path.exists('/srv/start')
+    assert os.path.exists('/etc/profile.d/show_motd.sh')
 
 
 def test_environment_variables():
