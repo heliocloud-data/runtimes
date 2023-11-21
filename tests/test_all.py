@@ -23,6 +23,8 @@ packages = [
     # included in panhelio-notebook metapackage
     # https://github.com/conda-forge/panhelio-notebook-feedstock/blob/master/recipe/meta.yaml
     'dask', 'distributed', 'dask_gateway', 'dask_labextension', 
+    # key HelioCloud packages
+    'cloudcatalog',
     # jupyterhub and related utilities
     'jupyterhub', 'jupyterlab', 'nbgitpuller',
     # aws/storage stuff
