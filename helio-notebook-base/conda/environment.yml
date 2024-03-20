@@ -1,4 +1,4 @@
-name: panhelio-pangeo-base
+name: helio-notebook-base
 channels:
  - conda-forge
  - nodefaults
