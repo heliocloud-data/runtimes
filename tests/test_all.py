@@ -31,6 +31,7 @@ packages = [
     # aws/storage stuff
     's3fs', 'kerchunk', 'h5py', 'xarray', #, 'intake'
     # pyhc core 
+    'hapiclient',
     'hapiplot',
     'kamodo',
     'netCDF4',
