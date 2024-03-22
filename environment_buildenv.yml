@@ -1,0 +1,8 @@
+name: runtime-buildenv
+channels:
+ - conda-forge
+ - nodefaults
+dependencies:
+ - conda-lock
+ - python
+ - pip
