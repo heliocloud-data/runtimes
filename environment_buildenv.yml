@@ -1,3 +1,4 @@
+# the environment which is used by the make command to build other conda environments
 name: runtime-buildenv
 channels:
  - conda-forge
