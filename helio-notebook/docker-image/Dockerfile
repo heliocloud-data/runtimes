@@ -1,4 +1,5 @@
 ARG PANGEO_BASE_IMAGE_TAG=2022.09.21
+#ARG PANGEO_BASE_IMAGE_TAG=2024.02.27
 FROM pangeo/base-image:${PANGEO_BASE_IMAGE_TAG}
 
 USER root
@@ -20,7 +21,7 @@ RUN echo "cat /etc/motd" > /etc/profile.d/show_motd.sh
 COPY --chown=1000:1000 motd /etc/
 RUN chmod 644 /etc/motd
 
-# and then install Jupyter Lab extensions you need
+# Install Jupyter Lab extensions we need
 RUN set -ex \
    && jupyter lab build -y \
    && jupyter lab clean -y
@@ -34,6 +35,17 @@ COPY --chown=1000:1000 jupyterlab_s3_browser.json /srv/conda/envs/$CONDA_ENV/etc
 
 ##-Cleanup temporary data
 USER root
+
+# Install PyHC packages with pip (SpacePy, Kamodo, and pySPEDAS separately)
+#RUN pip install --no-cache-dir numpy==1.24.3 && \
+#COPY --chown=1000:1000 requirements_pyhc.txt /var/tmp
+
+RUN pip install --no-cache-dir spacepy --no-build-isolation && \
+#    pip install --use-pep517 --retries 5 --no-cache-dir -r /var/tmp/requirements_pyhc.txt && \
+#    pip install --no-cache-dir git+https://github.com/nasa/Kamodo.git && \
+    pip install --no-cache-dir pytplot-mpl-temp && \
+    pip install --no-cache-dir pyspedas
+
 RUN apt clean
 RUN apt autoclean
 RUN apt -y autoremove

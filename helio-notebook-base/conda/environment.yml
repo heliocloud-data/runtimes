@@ -1,111 +1,105 @@
-name: helio-notebook-base
+# just the bare minimum basics to run notebooks in HelioCloud
+name: heliocloud-notebook-base
 channels:
  - conda-forge
  - nodefaults
- - nvidia
 dependencies:
- - python=3.*
-# - pangeo-notebook=2022.09.21
+ - python=3.9.*
+ - pytest
+# - gfortran_linux-64  # - gfortran=11.2  # needed for ffnet dependency of spacepy
+# - gcc_linux-64  # Added to help matplotlib wheel build
+# - gxx_linux-64  # Added to help matplotlib wheel build
+# - jupyter-book  # =0.15.1
+# - jupyterlab    # =3.5.0
+# - jupyterlab-git # =0.39.3
  - pip
-# - adlfs - azure filesystem support 
-# - argopy
+ - glob2
+ - html5lib
+ - ipympl # interactive matplotlib  
+ - conda-lock
+ - cython
+ - dask-ml
+ - dask-gateway
+ - dask-labextension
+ - jupyterhub-singleuser
+# - keyring # password storage 
+ - nbgitpuller
+ - nodejs
+ - sgp4
+# PANGEO depends
+# - adlfs # azure datalake fs 
  - awscli
+ - black # code formatter 
  - boto3
-# - bottleneck
-# - cartopy >= 0.20.0
-# - cfgrib -- unidata common format from grib files 
-# - ciso
-# - dask-gateway
-# - dask-labextension
-# - dask-ml
-# - datashader
-# - descartes
-# - earthdata
-# - eofs
-# - erddapy
-# - esmpy
-# - fastjmd95
-# - flox
-# - fsspec
-# - gcm_filters
-# - gcsfs
-# - gh
-# - geocube
-# - geogif
-# - geopandas
-# - geopy
-# - geoviews-core
-# - git-lfs
-# - gsw
-# - h5netcdf
-#- h5py
-# - holoviews
-# - hvplot
-# - intake
-# - intake-esm
-# - intake-geopandas
-# - intake-stac
-# - intake-xarray
+ - bottleneck
+ - ciso
+ - fastjmd95
+ - flox
+ - fsspec
+# - gcsfs # google cloud storage 
+ - gh
+ - gh-scoped-creds
+ - git-lfs
+ - h5netcdf
+ - h5py
+# - holoviews # plot and annotate data 
+# - hvplot # visualiztion 
+ - ipdb
+ - ipykernel
  - ipyleaflet
  - ipytree
- - ipywidgets
+ - ipywidgets # warning : this caused issues in the past 
+ - jupyterlab_code_formatter
+ - jupyterlab-git
+ - jupyterlab-myst
  - jupyter-panel-proxy
  - jupyter-resource-usage
- - jupyterlab-git
  - kerchunk
+ - line_profiler
  - lxml
  - lz4
-# - matplotlib-base
-# - metpy
+ - matplotlib-base
+ - memory_profiler
  - nb_conda_kernels
  - nbstripout
-# - nc-time-axis
-# - netcdf4
-# - numcodecs
-# - numpy
-# - pandas
-# - panel
-# - parcels
- - param!=1.11.0
-# - pop-tools
-# - prefect=0.15.13
-# - pyarrow
-# - pycamhd
-# - pydap
-# - pygeos
-# - pystac
-# - pystac-client
-# - python-blosc
-# - python-gist
-# - python-graphviz
-# - rasterio
-# - rechunker
-# - rio-cogeo
-# - rioxarray
-# - rise
- - s3fs>0.5
-# - satpy
-# - scikit-image
-# - scikit-learn
-# - scipy
-# - seaborn
-# - sparse
-# - stackstac
+ - nc-time-axis
+ - netcdf4
+ - numbagg
+ - numcodecs
+ - numpy
+ - numpy_groupies
+ - pandas
+ - panel
+   # this causes a bad import of build env
+# - parcels # generate conda pack parcels for cloudera hadoop 
+ - param
+ - pyarrow # apache arrow 
+ - python-blosc
+ - python-gist
+ - python-graphviz
+ - python-xxhash
+ - rechunker
+ - s3fs
+ - scikit-image
+ - scikit-learn
+ - scipy
+ - seaborn
+ - sparse
+# - snakeviz # graphical browser of cProfile 
 # - tiledb-py
 # - timezonefinder
-# - xarray
-# - xarrayutils
-# - xarray_leaflet
-# - xarray-spatial
-# - xcape
-# - xcube>=0.9.1
-# - xesmf
-# - xgcm
-# - xhistogram
-# - xmip
-# - xmitgcm
-# - xpublish
-# - xrft
-# - xskillscore
-# - zarr
-# - gh-scoped-creds
+ - watermark
+ - xarray
+ - xarrayutils
+ - xarray-datatree
+ - xarray_leaflet
+ - xarray-spatial
+ - xbatcher
+ - xcape
+# - xgboost # binary packages for some language bindings, NVIDIA GPU support 
+#- xhistogram # Fast, flexible, label-aware histograms for numpy and xarray 
+ - xmitgcm
+# - xpublish # serve xarray over http 
+ - xrft # the discrete Fourier transform (DFT) on xarray and dask arrays 
+ - xxhash # Extremely fast Hash algorithm, processing at RAM speed limits 
+ - zarr

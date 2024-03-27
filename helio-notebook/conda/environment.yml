@@ -1,69 +1,44 @@
-name: helio-cloud-py
+# this should be used in conjunction with helionotebook-base environment
+name: heliocloud-notebook-py
 channels:
 - conda-forge
 - nodefaults
-- astropy
 dependencies:
-- aiapy
-- astropy
-- awscli
-- cdflib
-- conda-lock
-- cython
-- drms
-- fastparquet
-- glob2 
-- html5lib
-- ipympl
+#  - python=3.9.*
+#  - gfortran_linux-64  # - gfortran=11.2  # needed for ffnet dependency of spacepy
+#  - gcc_linux-64  # Added to help matplotlib wheel build
+#  - gxx_linux-64  # Added to help matplotlib wheel build
+#  - jupyter-book  # =0.15.1
+ - jupyterlab=3.5.0
+ - dask-core=2022.11.0
+ - dask-gateway=2022.10.0
+ - dask-ml=2022.5.27
+#- jupyterlab-git # =0.39.3
+# - pip
+# - aiapy
+# - astropy
+# - cdflib
+# - conda-lock
+#  - cython
+#- drms
+#- fastparquet
+#  - glob2 
+#  - html5lib
+#  - ipympl
 # this causes problems w/ jupyter lab build perhaps drop back to 0.6.0?
 #- ipyscales
-- jupyterhub-singleuser
-- keyring
-- nbgitpuller
-- nodejs
-- plasmapy
-- py-spy
-- pyhdf 
-- s3fs
-- setuptools<60.0
-- sunpy
-- sgp4
-- xlrd
-- xlwt
-- pip:
-    - aacgmv2 
-    - ai.cs
-    - apexpy
-    - asdf
-    - astroquery
-    - ccdproc
-    - geospacepy
-    - hapiclient
-    - hapiplot
-    - graphviz
-    - gwcs
-    - jupyter-offlinenotebook
-    - jupyterlab-s3-browser
-    - jupytext
-    - kamodo
-    - nbzip
-    - ocbpy
-    - OMMBV
-    - pfsspy[performance]
-    - photutils
-    - pysat
-    - pyspedas
-    - pysatCDF
-    - pysatCDAAC
-    - pyEphem
-    - pyForecastTools
-    - pysatMadrigal
-    - pysatSpaceWeather
-    - pysatSeasons
-    - spacepy
-    - speasy
-    - specutils>=1.1.1
-    - solarmach
-    - sunkit-image
-    - sunpy-soar
-    - viresclient
+# - jupyterhub-singleuser
+# - keyring
+# - nbgitpuller
+# - nodejs
+#- plasmapy
+#- py-spy
+#- pyhdf 
+#- setuptools<60.0
+#- sunpy
+# - sgp4
+# #install this stuff
+ - specutils
+ - photutils
+ - xlrd
+ - xlwt
