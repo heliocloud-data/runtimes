@@ -1,5 +1,5 @@
-ARG PANGEO_BASE_IMAGE_TAG=2022.09.21
 #ARG PANGEO_BASE_IMAGE_TAG=2024.02.27
+ARG PANGEO_BASE_IMAGE_TAG=2022.09.21
 FROM pangeo/base-image:${PANGEO_BASE_IMAGE_TAG}
 
 USER root
@@ -42,7 +42,7 @@ USER root
 
 RUN pip install --no-cache-dir spacepy --no-build-isolation && \
 #    pip install --use-pep517 --retries 5 --no-cache-dir -r /var/tmp/requirements_pyhc.txt && \
-#    pip install --no-cache-dir git+https://github.com/nasa/Kamodo.git && \
+    pip install --no-cache-dir git+https://github.com/nasa/Kamodo.git && \
     pip install --no-cache-dir pytplot-mpl-temp && \
     pip install --no-cache-dir pyspedas
 
@@ -58,6 +58,7 @@ WORKDIR $HOME
 COPY --chown=1000:1000 bash_profile .bash_profile
 RUN touch .bashrc
 COPY --chown=1000:1000 srv-conda-condarc /srv/conda/.condarc
+CMD /usr/bin/chown $NB_USER.$NB_USER -R $HOME
 CMD $conda init bash
 
 USER root

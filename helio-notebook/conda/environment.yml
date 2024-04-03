@@ -9,10 +9,6 @@ dependencies:
 #  - gcc_linux-64  # Added to help matplotlib wheel build
 #  - gxx_linux-64  # Added to help matplotlib wheel build
 #  - jupyter-book  # =0.15.1
- - jupyterlab=3.5.0
- - dask-core=2022.11.0
- - dask-gateway=2022.10.0
- - dask-ml=2022.5.27
 #- jupyterlab-git # =0.39.3
 # - pip
 # - aiapy
@@ -27,7 +23,6 @@ dependencies:
 #  - ipympl
 # this causes problems w/ jupyter lab build perhaps drop back to 0.6.0?
 #- ipyscales
-# - jupyterhub-singleuser
 # - keyring
 # - nbgitpuller
 # - nodejs
