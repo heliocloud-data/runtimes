@@ -6,12 +6,6 @@ channels:
 dependencies:
  - python=3.10.*
  - pytest
-# - gfortran_linux-64  # - gfortran=11.2  # needed for ffnet dependency of spacepy
-# - gcc_linux-64  # Added to help matplotlib wheel build
-# - gxx_linux-64  # Added to help matplotlib wheel build
-# - jupyter-book  # =0.15.1
-# - jupyterlab    # =3.5.0
-# - jupyterlab-git # =0.39.3
  - pip
  - glob2
  - html5lib
@@ -29,6 +23,7 @@ dependencies:
  - jupyterlab_widgets=3.0.3
  - jupyterhub-base=3.0.0
  - jupyterhub-singleuser=3.0.0
+ - jupyter-book  # =0.15.1
  - dask=2022.11.1
  - dask-core=2022.11.1
  - dask-gateway=2022.10.0
@@ -42,7 +37,7 @@ dependencies:
  - nodejs
  - sgp4
 # PANGEO depends
-# - adlfs # azure datalake fs 
+ - adlfs # azure datalake fs 
  - awscli
  - black # code formatter 
  - boto3
@@ -51,7 +46,7 @@ dependencies:
  - fastjmd95
  - flox
  - fsspec
-# - gcsfs # google cloud storage 
+ - gcsfs # google cloud storage 
  - gh
  - gh-scoped-creds
  - git-lfs
@@ -65,7 +60,7 @@ dependencies:
  - ipyleaflet
  - ipytree=0.2.2
  - ipywidgets=8.0.2 # warning : this caused issues in the past 
-# - jupyterlab_code_formatter
+ - jupyterlab_code_formatter
  - jupyterlab-git=0.39.3
 # - jupyterlab-myst
  - jupyter-panel-proxy=0.1.0
