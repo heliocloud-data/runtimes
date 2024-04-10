@@ -16,7 +16,7 @@ hapiplot==0.2.0
 jupyterlab-s3-browser==0.10.1
 jupyter-offlinenotebook
 jupytext==1.13.8
-kamodo==21.10.0
+#kamodo==21.10.0
 nbzip==0.1.0
 numpy>=1.22.2
 #ocbpy==0.2.1
