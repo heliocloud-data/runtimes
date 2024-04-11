@@ -23,22 +23,28 @@ def test_default_conda_environment():
 packages = [
     # included in panhelio-notebook metapackage
     # https://github.com/conda-forge/panhelio-notebook-feedstock/blob/master/recipe/meta.yaml
+    'distributed', 'dask_gateway', 'dask_labextension', 
     'dask', 'distributed', 'dask_gateway', 'dask_labextension', 
     # key HelioCloud packages
     'cloudcatalog',
     # jupyterhub and related utilities
-    'jupyterhub', 'jupyterlab', 'nbgitpuller',
+    'jupyterhub', 'jupyterlab', 
+    'nbgitpuller', 
     # aws/storage stuff
-    's3fs', 'kerchunk', 'h5py', 'xarray', #, 'intake'
+    's3fs', 'kerchunk', 'h5py', 'xarray', 'zarr',
     # pyhc core 
     'hapiclient',
     'hapiplot',
     'kamodo',
     'netCDF4',
-    'plasmapy',
-    'spacepy', 'sunpy',
-    #'pysat', #'pysatSeasons', 'pysatNASA', 'pysatMissions',
+    'OMMBV',
+    'plasmapy', 'pyspedas', 'spacepy', 'sunpy',
+    'pysat', 
+    #'pysatSeasons', 'pysatNASA', 'pysatMissions',
     # key packages
+    'apexpy', 'aacgmv2', 
+    'cdflib',
+    'fiasco',
     ]
 
 @pytest.mark.parametrize('package_name', packages, ids=packages)

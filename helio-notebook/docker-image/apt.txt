@@ -7,6 +7,7 @@ curl
 g++
 g++-multilib
 gawk
+gcc
 gcc-multilib
 gfortran
 git
