@@ -33,30 +33,30 @@ ENV CDF_LIB=/usr/lib64/cdf/lib
 # jupyterlab-s3 browser 
 COPY --chown=1000:1000 jupyterlab_s3_browser.json /srv/conda/envs/$CONDA_ENV/etc/jupyter/jupyter_notebook_config.d/
 
-##-Cleanup temporary data
-USER root
-
-# Install PyHC packages with pip (SpacePy, Kamodo, and pySPEDAS separately)
-#RUN pip install --no-cache-dir numpy==1.24.3 && \
-#COPY --chown=1000:1000 requirements_pyhc.txt /var/tmp
-
+# Install some PyHC packages directly here.
 RUN pip install --no-cache-dir spacepy --no-build-isolation && \
-#    pip install --use-pep517 --retries 5 --no-cache-dir -r /var/tmp/requirements_pyhc.txt && \
     pip install --no-cache-dir git+https://github.com/nasa/Kamodo.git && \
     pip install --no-cache-dir git+https://github.com/plasmapy/plasmapy.git && \
     pip install --no-cache-dir git+https://github.com/wtbarnes/fiasco.git && \
     pip install --no-cache-dir pytplot-mpl-temp && \
     pip install --no-cache-dir pyspedas
 
+##- Cleanup temporary data
 RUN apt clean
 RUN apt autoclean
 RUN apt -y autoremove
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN conda clean -afy
 
+# User account configuration
 # Setup work directory for backward-compatibility
 USER $NB_USER
 WORKDIR $HOME
 
+# create PyHC package data dirs (needed?)
+RUN mkdir -p $NB_USER/.sunpy $NB_USER/.spacepy/data
+
+# user account starting environment
 COPY --chown=1000:1000 bash_profile .bash_profile
 RUN touch .bashrc
 COPY --chown=1000:1000 srv-conda-condarc /srv/conda/.condarc
