@@ -25,26 +25,38 @@ packages = [
     # https://github.com/conda-forge/panhelio-notebook-feedstock/blob/master/recipe/meta.yaml
     'distributed', 'dask_gateway', 'dask_labextension', 
     'dask', 'distributed', 'dask_gateway', 'dask_labextension', 
+    'jupytext',
     # key HelioCloud packages
     'cloudcatalog',
     # jupyterhub and related utilities
+    'ipykernel',
     'jupyterhub', 'jupyterlab', 
+    'jupyter_offlinenotebook',
     'nbgitpuller', 
+    'nbzip',
     # aws/storage stuff
-    's3fs', 'kerchunk', 'h5py', 'xarray', 'zarr',
+    'boto3', 's3fs', 'kerchunk', 'h5py', 'xarray', 'zarr',
     # pyhc core 
     'hapiclient',
     'hapiplot',
     'kamodo',
-    'netCDF4',
-    'OMMBV',
     'plasmapy', 'pyspedas', 'spacepy', 'sunpy',
+    'sunpy_soar', 'sunkit_image', 
     'pysat', 
     #'pysatSeasons', 'pysatNASA', 'pysatMissions',
-    # key packages
+    # other critical packages 
+    'astroquery',
     'apexpy', 'aacgmv2', 
+    'ccdproc',
     'cdflib',
     'fiasco',
+    'geospacepy',
+    'netCDF4',
+    'ocbpy',
+    'OMMBV',
+    'solarmach',
+    'speasy',
+    'viresclient',
     ]
 
 @pytest.mark.parametrize('package_name', packages, ids=packages)
