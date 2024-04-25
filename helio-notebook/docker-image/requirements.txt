@@ -6,7 +6,7 @@ astroquery==0.4.6
 ai.cs==1.0.7
 ccdproc==2.3.0
 cloudcatalog>=0.4
-fiasco==0.2.3
+#fiasco==0.2.3
 geospacepy==0.2.2
 #graphviz==0.20
 gwcs==0.18.1

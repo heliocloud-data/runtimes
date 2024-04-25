@@ -44,6 +44,7 @@ RUN pip install --no-cache-dir spacepy --no-build-isolation && \
 #    pip install --use-pep517 --retries 5 --no-cache-dir -r /var/tmp/requirements_pyhc.txt && \
     pip install --no-cache-dir git+https://github.com/nasa/Kamodo.git && \
     pip install --no-cache-dir git+https://github.com/plasmapy/plasmapy.git && \
+    pip install --no-cache-dir git+https://github.com/wtbarnes/fiasco.git && \
     pip install --no-cache-dir pytplot-mpl-temp && \
     pip install --no-cache-dir pyspedas
 
