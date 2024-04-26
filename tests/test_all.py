@@ -7,6 +7,7 @@ def test_config_paths():
     assert os.path.exists('/etc/profile.d/init_conda.sh')
     assert os.path.exists('/srv/conda/.condarc')
     assert os.path.exists('/srv/start')
+    assert os.path.exists('/etc/profile.d/show_motd.sh')
 
 
 def test_environment_variables():
@@ -22,9 +23,40 @@ def test_default_conda_environment():
 packages = [
     # included in panhelio-notebook metapackage
     # https://github.com/conda-forge/panhelio-notebook-feedstock/blob/master/recipe/meta.yaml
+    'distributed', 'dask_gateway', 'dask_labextension', 
     'dask', 'distributed', 'dask_gateway', 'dask_labextension', 
+    'jupytext',
+    # key HelioCloud packages
+    'cloudcatalog',
     # jupyterhub and related utilities
-    'jupyterhub', 'jupyterlab', 'nbgitpuller'
+    'ipykernel',
+    'jupyterhub', 'jupyterlab', 
+    'jupyter_offlinenotebook',
+    'nbgitpuller', 
+    'nbzip',
+    # aws/storage stuff
+    'boto3', 's3fs', 'kerchunk', 'h5py', 'xarray', 'zarr',
+    # pyhc core 
+    'hapiclient',
+    'hapiplot',
+    'kamodo',
+    'plasmapy', 'pyspedas', 'spacepy', 'sunpy',
+    'sunpy_soar', 'sunkit_image', 
+    'pysat', 
+    #'pysatSeasons', 'pysatNASA', 'pysatMissions',
+    # other critical packages 
+    'astroquery',
+    'apexpy', 'aacgmv2', 
+    'ccdproc',
+    'cdflib',
+    'fiasco',
+    'geospacepy',
+    'netCDF4',
+    'ocbpy',
+    'OMMBV',
+    'solarmach',
+    'speasy',
+    'viresclient',
     ]
 
 @pytest.mark.parametrize('package_name', packages, ids=packages)

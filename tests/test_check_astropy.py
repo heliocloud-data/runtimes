@@ -35,6 +35,22 @@ PKGS = {'IPython': '7.2',
         'specutils': '1.1.1',
         'astroquery': '0.4.1'}
 
+def check_s3fs():
+    # AstroPy S3 read test (also importing Dask)
+    import astropy.io.fits
+    from dask.distributed import Client
+    s3key = 's3://gov-nasa-hdrl-data1/sdo/aia/20100513/0094/sdo_aia_h2_20100513T000000_0094_v1.fits'
+    hdul = None
+    date = None
+    try:
+        hdul = astropy.io.fits.open(s3key, fsspec_kwargs={"anon": True})
+        date = hdul[1].header['T_OBS']
+    except Exception as ex:
+        pass
+
+    assert hdul is not None
+    assert date is not None
+
 
 def check_package(package_name, minimum_version=None, verbose=True):
     errors = False

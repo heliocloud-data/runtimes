@@ -2,7 +2,7 @@
 
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 
-export HELIOCLOUD_ENV="helio-notebook"
+export HELIOCLOUD_ENV="helio-notebook-mltf"
 if ! [[ -z "${HELIOCLOUD_SCRATCH_PREFIX}" ]] && ! [[ -z "${JUPYTERHUB_USER}" ]]; then
     export HELIOCLOUD_SCRATCH="${HELIOCLOUD_SCRATCH_PREFIX}/${JUPYTERHUB_USER}/"
 fi

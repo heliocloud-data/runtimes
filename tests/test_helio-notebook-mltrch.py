@@ -4,9 +4,11 @@ import sys
 import os
 
 packages = [
-    # these are problem libraries that don't always seem to import, mostly due
-    # to dependencies outside the python world
-    # 'foobar',
+    # key packages
+    'torch',  #'torchvision', 
+    'torch.cuda',
+    'torch.nn',
+    'cv2'
     ]
 
 @pytest.mark.parametrize('package_name', packages, ids=packages)
@@ -16,4 +18,4 @@ def test_import(package_name):
 def test_start():
     print(os.environ)
     if os.environ.get('HELIOCLOUD_ENV') is not None:
-        assert os.environ['HELIOCLOUD_ENV'] == 'helio-notebook'
+        assert os.environ['HELIOCLOUD_ENV'] == 'helio-notebook-mltrch'
