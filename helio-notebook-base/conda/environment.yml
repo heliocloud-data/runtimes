@@ -90,7 +90,7 @@ dependencies:
  - python-graphviz
  - python-xxhash
  - rechunker
- - s3fs
+ - s3fs>0.5
  - scikit-image
  - scikit-learn
  - scipy
