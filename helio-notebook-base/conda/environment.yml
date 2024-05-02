@@ -99,6 +99,7 @@ dependencies:
 # - snakeviz # graphical browser of cProfile 
 # - tiledb-py
 # - timezonefinder
+ - tensorflow
  - watermark
  - xarray
  - xarrayutils
