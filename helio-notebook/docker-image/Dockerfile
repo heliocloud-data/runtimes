@@ -42,11 +42,11 @@ RUN pip install --no-cache-dir spacepy --no-build-isolation && \
     pip install --no-cache-dir pyspedas
 
 ##- Cleanup temporary data
-RUN apt clean
-RUN apt autoclean
-RUN apt -y autoremove
-RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-RUN conda clean -afy
+RUN apt clean \
+   && apt autoclean \
+   && apt -y autoremove \
+   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+   && conda clean -afy
 
 # User account configuration
 # Setup work directory for backward-compatibility
