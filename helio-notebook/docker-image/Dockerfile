@@ -36,7 +36,6 @@ COPY --chown=1000:1000 jupyterlab_s3_browser.json /srv/conda/envs/$CONDA_ENV/etc
 # Install some PyHC packages directly here.
 RUN pip install --no-cache-dir spacepy --no-build-isolation && \
     pip install --no-cache-dir git+https://github.com/nasa/Kamodo.git && \
-    pip install --no-cache-dir git+https://github.com/plasmapy/plasmapy.git && \
     pip install --no-cache-dir git+https://github.com/wtbarnes/fiasco.git && \
     pip install --no-cache-dir pytplot-mpl-temp && \
     pip install --no-cache-dir pyspedas

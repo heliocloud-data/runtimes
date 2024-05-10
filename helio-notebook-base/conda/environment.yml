@@ -33,6 +33,7 @@ dependencies:
  - distributed=2022.11.1
  - hapiclient=0.2.5
  - py-spy # load testing req
+ - plasmapy=2024.5.0
  - voila=0.4.0
  - keyring # password storage 
  - nbgitpuller
