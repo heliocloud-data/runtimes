@@ -31,12 +31,17 @@ dependencies:
  - dask-glm=0.2.0
  - dask-ml=2022.5.27
  - distributed=2022.11.1
+ # pyhc stuff
  - hapiclient=0.2.5
- - py-spy # load testing req
  - plasmapy=2024.5.0
+ - sunpy
+ - sunkit-image
+ - sunpy-soar
  - voila=0.4.0
+ # other
  - keyring # password storage 
  - nbgitpuller
+ - py-spy # load testing req
  - nodejs
  - sgp4
 # PANGEO depends
