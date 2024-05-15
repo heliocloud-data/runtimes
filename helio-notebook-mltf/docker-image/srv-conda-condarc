@@ -1,0 +1,5 @@
+envs_dirs:
+  - /home/jovyan/users_conda_envs
+channels:
+- conda-forge
+

@@ -1,0 +1,21 @@
+# Note: this environment will be merged with the panhelio-notebook/environment.yml
+# by conda-lock. Only put things here that are not already in the other files
+name: helio-ml-trch-notebook
+channels:
+ - conda-forge
+ - nodefaults
+ - nvidia
+dependencies:
+ - python=3.9*
+ - pytorch=1.12.1
+ - cuda=11.7.1
+ - cudatoolkit=11.7.0
+ - cudnn=8.4.1.50
+# - cudf=22.10
+# - cuml
+# - cugraph
+# - flax
+ - opencv=4.6.0
+ - jax=0.3.0
+ - jaxlib=0.1.75
+# - keras-cv
