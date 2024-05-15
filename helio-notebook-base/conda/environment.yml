@@ -18,7 +18,7 @@ dependencies:
  - jupyterlab=3.5.0
  - jupyterlab_server=2.16.3
  - jupyterlab_pygments=0.2.2
- - jupyterlab_widgets=3.0.3
+ - jupyterlab_widgets=3.0.10
  - jupyterhub-base=3.0.0
  - jupyterhub-singleuser=3.0.0
  - jupyter-book  # =0.15.1
@@ -70,7 +70,7 @@ dependencies:
  - ipykernel=6.20.2
  - ipyleaflet
  - ipytree=0.2.2
- - ipywidgets=8.0.2 # warning : this caused issues in the past 
+ - ipywidgets=8.1.2 # warning : this caused issues in the past 
  - jupyterlab_code_formatter
  - jupyterlab-git=0.39.3
 # - jupyterlab-myst

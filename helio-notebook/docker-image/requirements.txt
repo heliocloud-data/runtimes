@@ -29,6 +29,7 @@ pysatMissions==0.3.4
 pysatNASA==0.0.5
 pysatSeasons==0.2.0
 pysatSpaceWeather==0.1.0
+stixpy==0.1.1
 speasy==1.2.7
-solarmach==0.1.1
+solarmach==0.3.4
 viresclient==0.10.2
