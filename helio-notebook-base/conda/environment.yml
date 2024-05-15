@@ -4,15 +4,13 @@ channels:
  - conda-forge
  - nodefaults
 dependencies:
+ # the basics
  - python=3.10.*
  - pytest
  - pip
- - glob2
- - html5lib
- - ipympl # interactive matplotlib  
- - cdflib
  - conda-lock
  - cython
+ # daskhub stuff
  - jupyter_core=5.0.0
  - jupyter_client=7.3.4
  - jupyter_server=1.23.3
@@ -31,7 +29,9 @@ dependencies:
  - dask-glm=0.2.0
  - dask-ml=2022.5.27
  - distributed=2022.11.1
- # pyhc stuff
+ # helio/pyhc stuff
+ - aiapy=0.7.4
+ - cdflib
  - hapiclient=0.2.5
  - plasmapy=2024.5.0
  - sunpy=5.1.2
@@ -39,10 +39,13 @@ dependencies:
  - sunpy-soar=1.2
  - voila=0.4.0
  # other
+ - glob2
+ - html5lib
+ - ipympl # interactive matplotlib  
  - keyring # password storage 
  - nbgitpuller
- - py-spy # load testing req
  - nodejs
+ - py-spy # load testing req
  - sgp4
 # PANGEO depends
  - adlfs # azure datalake fs 
