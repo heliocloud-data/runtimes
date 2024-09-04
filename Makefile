@@ -4,62 +4,62 @@
 TESTDIR=/tmp/test-container
 
 .PHONY: all
-all: helio-notebook helio-notebook-mltf helio-notebook-mktrch
+all: helio-daskhub-core helio-daskhub-mltf helio-daskhub-mktrch
 
-.PHONY: helio-notebook
-helio-notebook : helio-notebook-build helio-notebook-test
+.PHONY: helio-daskhub-core
+helio-daskhub-core : helio-daskhub-core-build helio-daskhub-core-test
 
-.PHONY: helio-notebook-conda
-helio-notebook-conda :
+.PHONY: helio-daskhub-core-conda
+helio-daskhub-core-conda :
 	# WARNING this takes a while 
-	conda-lock lock --mamba -k explicit -f helio-notebook-base/conda/environment.yml -f helio-notebook/conda/environment.yml -p linux-64; \
-	mv conda-linux-64.lock helio-notebook/docker-image;
+	conda-lock lock --mamba -k explicit -f helio-base/conda/environment.yml -f helio-daskhub-core/conda/environment.yml -p linux-64; \
+	mv conda-linux-64.lock helio-daskhub-core/docker-image;
 
-.PHONY: helio-notebook-build
-helio-notebook-build:
-	cd helio-notebook/docker-image; \
-	docker build -t heliocloud/helio-notebook:dev .; 
+.PHONY: helio-daskhub-core-build
+helio-daskhub-core-build:
+	cd helio-daskhub-core/docker-image; \
+	docker build -t heliocloud/helio-daskhub-core:dev .; 
 
-.PHONY: helio-notebook-test
-helio-notebook-test :
-	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-notebook:dev helio-notebook/docker-image/run_tests.sh helio-notebook
+.PHONY: helio-daskhub-core-test
+helio-daskhub-core-test :
+	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-daskhub:dev helio-daskhub-core/docker-image/run_tests.sh helio-daskhub
 
-.PHONY: helio-notebook-mltf
-helio-notebook-mltf : helio-notebook-mltf-build helio-notebook-mltf-test
+.PHONY: helio-daskhub-mltf
+helio-daskhub-mltf : helio-daskhub-mltf-build helio-daskhub-mltf-test
 
-.PHONY: helio-notebook-mltf-conda
-helio-notebook-mltf-conda:
+.PHONY: helio-daskhub-mltf-conda
+helio-daskhub-mltf-conda:
 	# WARNING this takes a while
-	conda-lock lock --mamba -k explicit -f helio-notebook-base/conda/environment.yml -f helio-notebook/conda/environment.yml -f helio-notebook-mltf/conda/environment.yml -p linux-64; \
-	mv conda-linux-64.lock helio-notebook-mltf/docker-image;
+	conda-lock lock --mamba -k explicit -f helio-base/conda/environment.yml -f helio-daskhub-core/conda/environment.yml -f helio-daskhub-mltf/conda/environment.yml -p linux-64; \
+	mv conda-linux-64.lock helio-daskhub-mltf/docker-image;
 
-.PHONY: helio-notebook-mltf-build
-helio-notebook-mltf-build:
-	cd helio-notebook-mltf/docker-image; \
-	docker build -t heliocloud/helio-notebook-mltf:dev .;
+.PHONY: helio-daskhub-mltf-build
+helio-daskhub-mltf-build:
+	cd helio-daskhub-mltf/docker-image; \
+	docker build -t heliocloud/helio-daskhub-mltf:dev .;
 
-.PHONY: helio-notebook-mltf-test
-helio-notebook-mltf-test:
-	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-notebook-mltf:dev helio-notebook/docker-image/run_tests.sh helio-notebook-mltf; \
-	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-notebook-mltf:dev helio-notebook-mltf/docker-image/run_tests.sh helio-notebook-mltf
+.PHONY: helio-daskhub-mltf-test
+helio-daskhub-mltf-test:
+	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-daskhub-mltf:dev helio-daskhub-core/docker-image/run_tests.sh helio-daskhub-mltf; \
+	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-daskhub-mltf:dev helio-daskhub-mltf/docker-image/run_tests.sh helio-daskhub-mltf
 
-.PHONY: helio-notebook-mltrch
-helio-notebook-mltrch : helio-notebook-mltrch-build helio-notebook-mltrch-test
+.PHONY: helio-daskhub-mltrch
+helio-daskhub-mltrch : helio-daskhub-mltrch-build helio-daskhub-mltrch-test
 	 
-.PHONY: helio-notebook-mltrch-conda
-helio-notebook-mltrch-conda:
+.PHONY: helio-daskhub-mltrch-conda
+helio-daskhub-mltrch-conda:
 	# WARNING this takes a while 
-	conda-lock lock --mamba -k explicit -f helio-notebook-base/conda/environment.yml -f helio-notebook/conda/environment.yml -f helio-notebook-mltrch/conda/environment.yml -p linux-64; \
-	mv conda-linux-64.lock helio-notebook-mltrch/docker-image;
+	conda-lock lock --mamba -k explicit -f helio-base/conda/environment.yml -f helio-daskhub-core/conda/environment.yml -f helio-daskhub-mltrch/conda/environment.yml -p linux-64; \
+	mv conda-linux-64.lock helio-daskhub-mltrch/docker-image;
 	
-.PHONY: helio-notebook-mltrch-build
-helio-notebook-mltrch-build:
-	cd helio-notebook-mltrch/docker-image; \
-	docker build -t heliocloud/helio-notebook-mltrch:dev .;
+.PHONY: helio-daskhub-mltrch-build
+helio-daskhub-mltrch-build:
+	cd helio-daskhub-mltrch/docker-image; \
+	docker build -t heliocloud/helio-daskhub-mltrch:dev .;
 
-.PHONY: helio-notebook-mltrch-test
-helio-notebook-mltrch-test: 
-	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-notebook-mltrch:dev helio-notebook/docker-image/run_tests.sh helio-notebook-mltrch; \
-	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-notebook-mltrch:dev helio-notebook-mltrch/docker-image/run_tests.sh helio-notebook-mltrch
+.PHONY: helio-daskhub-mltrch-test
+helio-daskhub-mltrch-test: 
+	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-daskhub-mltrch:dev helio-daskhub-core/docker-image/run_tests.sh helio-daskhub-mltrch; \
+	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-daskhub-mltrch:dev helio-daskhub-mltrch/docker-image/run_tests.sh helio-daskhub-mltrch
 
 

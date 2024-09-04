@@ -2,6 +2,7 @@
 ARG PANGEO_BASE_IMAGE_TAG=2022.09.21
 FROM pangeo/base-image:${PANGEO_BASE_IMAGE_TAG}
 
+
 USER root
 # - upgrade environment (probably should be in helio-base?)
 RUN apt update -y
