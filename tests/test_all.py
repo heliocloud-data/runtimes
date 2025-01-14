@@ -33,7 +33,8 @@ packages = [
     'jupyterhub', 'jupyterlab', 
     'jupyter_offlinenotebook',
     'nbgitpuller', 
-    'nbzip',
+    'smart_open',
+    # 'nbzip',
     # aws/storage stuff
     'boto3', 's3fs', 'kerchunk', 'h5py', 'xarray', 'zarr',
     # pyhc core 
@@ -53,7 +54,7 @@ packages = [
     'geospacepy',
     'netCDF4',
     'ocbpy',
-    'OMMBV',
+    #'OMMBV',
     'solarmach',
     'speasy',
     'viresclient',

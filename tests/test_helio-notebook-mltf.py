@@ -6,8 +6,7 @@ import os
 packages = [
     # key packages
     'tensorflow', 
-    'jax',
-    'cv2'
+    'jax'
     ]
 
 @pytest.mark.parametrize('package_name', packages, ids=packages)

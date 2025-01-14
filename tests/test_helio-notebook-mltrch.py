@@ -5,10 +5,10 @@ import os
 
 packages = [
     # key packages
-    'torch',  #'torchvision', 
+    'torch',  
+    'torchvision', 
     'torch.cuda',
-    'torch.nn',
-    'cv2'
+    'torch.nn'
     ]
 
 @pytest.mark.parametrize('package_name', packages, ids=packages)

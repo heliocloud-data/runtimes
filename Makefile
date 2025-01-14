@@ -22,7 +22,7 @@ helio-daskhub-core-build:
 
 .PHONY: helio-daskhub-core-test
 helio-daskhub-core-test :
-	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-daskhub:dev helio-daskhub-core/docker-image/run_tests.sh helio-daskhub
+	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-daskhub-core:dev helio-daskhub-core/docker-image/run_tests.sh helio-notebook
 
 .PHONY: helio-daskhub-mltf
 helio-daskhub-mltf : helio-daskhub-mltf-build helio-daskhub-mltf-test
@@ -40,8 +40,8 @@ helio-daskhub-mltf-build:
 
 .PHONY: helio-daskhub-mltf-test
 helio-daskhub-mltf-test:
-	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-daskhub-mltf:dev helio-daskhub-core/docker-image/run_tests.sh helio-daskhub-mltf; \
-	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-daskhub-mltf:dev helio-daskhub-mltf/docker-image/run_tests.sh helio-daskhub-mltf
+	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-daskhub-mltf:dev helio-daskhub-core/docker-image/run_tests.sh helio-notebook-mltf; \
+	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-daskhub-mltf:dev helio-daskhub-mltf/docker-image/run_tests.sh helio-notebook-mltf
 
 .PHONY: helio-daskhub-mltrch
 helio-daskhub-mltrch : helio-daskhub-mltrch-build helio-daskhub-mltrch-test
@@ -59,7 +59,5 @@ helio-daskhub-mltrch-build:
 
 .PHONY: helio-daskhub-mltrch-test
 helio-daskhub-mltrch-test: 
-	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-daskhub-mltrch:dev helio-daskhub-core/docker-image/run_tests.sh helio-daskhub-mltrch; \
-	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-daskhub-mltrch:dev helio-daskhub-mltrch/docker-image/run_tests.sh helio-daskhub-mltrch
-
-
+	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-daskhub-mltrch:dev helio-daskhub-core/docker-image/run_tests.sh helio-notebook-mltrch; \
+	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) heliocloud/helio-daskhub-mltrch:dev helio-daskhub-mltrch/docker-image/run_tests.sh helio-notebook-mltrch

@@ -1,7 +1,7 @@
-#ARG PANGEO_BASE_IMAGE_TAG=2024.02.27
-ARG PANGEO_BASE_IMAGE_TAG=2022.09.21
+ARG PANGEO_BASE_IMAGE_TAG=2024.01.15
 FROM pangeo/base-image:${PANGEO_BASE_IMAGE_TAG}
 
+LABEL org.opencontainers.image.source=https://github.com/heliocloud-data/runtimes
 
 USER root
 # - upgrade environment (probably should be in helio-base?)
