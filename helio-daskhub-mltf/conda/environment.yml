@@ -1,21 +1,14 @@
 # Note: this environment will be merged with the panhelio-notebook/environment.yml
 # by conda-lock. Only put things here that are not already in the other files
-name: helio-ml-tf-notebook
+name: helio-daskhub-mltf
 channels:
  - conda-forge
  - nodefaults
- - nvidia
 dependencies:
- - python=3.9*
- - tensorflow>=2.10.0=*cuda112py39*
- - cuda=11.7.1
- - cudatoolkit=11.7.0
- - cudnn=8.4.1.50
-# - cudf=22.10
-# - cuml
-# - cugraph
-# - flax
- - opencv=4.6.0
- - jax=0.3.0
- - jaxlib=0.1.75
-# - keras-cv
+ - tensorflow>=2.14.0=*cuda118*
+ - cuda-version>=11.8
+ - cudatoolkit=11.8.0
+ - jax
+ - jupyterlab-nvdashboard
+ - keras-cv
+# - opencv
