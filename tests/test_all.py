@@ -57,6 +57,7 @@ packages = [
     #'OMMBV',
     'solarmach',
     'speasy',
+    'tensorflow',
     'viresclient',
     ]
 
