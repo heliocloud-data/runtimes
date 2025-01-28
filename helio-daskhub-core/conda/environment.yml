@@ -4,32 +4,18 @@ channels:
 - conda-forge
 - nodefaults
 dependencies:
-#  - python=3.9.*
 #  - gfortran_linux-64  # - gfortran=11.2  # needed for ffnet dependency of spacepy
 #  - gcc_linux-64  # Added to help matplotlib wheel build
 #  - gxx_linux-64  # Added to help matplotlib wheel build
 #  - jupyter-book  # =0.15.1
-#- jupyterlab-git # =0.39.3
-# - pip
-# - aiapy
-# - astropy
-# - cdflib
-# - conda-lock
-#  - cython
 #- drms
 #- fastparquet
 #  - glob2 
 #  - html5lib
 #  - ipympl
-# this causes problems w/ jupyter lab build perhaps drop back to 0.6.0?
-#- ipyscales
-# - keyring
-# - nbgitpuller
-# - nodejs
 #- plasmapy
 #- py-spy
 #- pyhdf 
-#- setuptools<60.0
 #- sunpy
 # - sgp4
 # #install this stuff

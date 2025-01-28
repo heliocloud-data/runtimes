@@ -10,8 +10,6 @@ fiasco==0.2.3
 geospacepy==0.2.2
 gwcs==0.21.0
 hapiplot==0.2.2
-jupyterlab-s3-browser==0.12.0
-jupyter-offlinenotebook
 jupytext==1.16.4
 nbzip
 ocbpy==0.2.1

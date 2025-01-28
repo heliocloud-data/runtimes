@@ -43,9 +43,6 @@ ENV LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/nvidia/lib64
 RUN sh install_cdflib.sh
 ENV CDF_LIB=/usr/lib64/cdf/lib
 
-# jupyterlab-s3 browser 
-COPY --chown=1000:1000 jupyterlab_s3_browser.json /srv/conda/envs/$CONDA_ENV/etc/jupyter/jupyter_notebook_config.d/
-
 # Install some PyHC packages directly here.
 RUN pip install --no-cache-dir spacepy --no-build-isolation && \
     pip install --no-cache-dir git+https://github.com/nasa/Kamodo.git && \
