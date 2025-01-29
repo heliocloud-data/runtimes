@@ -12,15 +12,8 @@ gcc-multilib
 gfortran
 git
 groff
-imagemagick
 libc6-dev
-libgl1
 libstdc++6
-libtinfo6
-libtool
-libxml2
-libxml2-utils
-libxslt1.1
 nano
-ncurses-dev 
+tree
 vim

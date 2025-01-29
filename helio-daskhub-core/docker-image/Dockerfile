@@ -62,3 +62,4 @@ CMD /usr/bin/chown $NB_USER.$NB_USER -R $HOME
 CMD $conda init bash
 
 USER root
+

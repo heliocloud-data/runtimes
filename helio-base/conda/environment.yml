@@ -49,21 +49,21 @@ dependencies:
  - python-magic # magic_open
  - py-spy # load testing req
  - sgp4
- - smart_open
+# - smart_open
 # PANGEO depends
- - adlfs # azure datalake fs 
+# - adlfs # azure datalake fs 
  - awscli
- - black # code formatter 
+# - black # code formatter 
  - boto3
- - bottleneck
- - ciso
- - fastjmd95
- - flox
- - fsspec
- - gcsfs # google cloud storage 
- - gh
- - gh-scoped-creds
- - git-lfs
+# - bottleneck
+# - ciso
+# - fastjmd95
+# - flox
+# - fsspec
+# - gcsfs # google cloud storage 
+# - gh
+# - gh-scoped-creds
+# - git-lfs
  - h5netcdf
  - h5py
 # - holoviews # plot and annotate data 
@@ -80,29 +80,29 @@ dependencies:
  - jupyter-panel-proxy # =0.1.0
  - jupyter-resource-usage # =0.6.4
  - kerchunk
- - line_profiler
+# - line_profiler
  - lxml
  - lz4
  - matplotlib-base
  - memory_profiler
  - nb_conda_kernels=2.3.1
  - nbstripout
- - nc-time-axis
+# - nc-time-axis
  - netcdf4
- - numbagg
+# - numbagg
  - numcodecs
  - numpy
- - numpy_groupies
+# - numpy_groupies
  - pandas
  - panel
    # this causes a bad import of build env
 # - parcels # generate conda pack parcels for cloudera hadoop 
- - param
- - pyarrow # apache arrow 
- - python-blosc
- - python-gist
- - python-graphviz
- - python-xxhash
+# - param
+# - pyarrow # apache arrow 
+# - python-blosc
+# - python-gist
+# - python-graphviz
+# - python-xxhash
  - rechunker
  - s3fs>0.5
  - scikit-image
@@ -114,18 +114,18 @@ dependencies:
 # - tiledb-py
 # - timezonefinder
  - tensorflow
- - watermark
+# - watermark
  - xarray
  - xarrayutils
- - xarray-datatree
+# - xarray-datatree
    #- xarray_leaflet # rio/geotiff related 
- - xarray-spatial
- - xbatcher
- - xcape
+# - xarray-spatial
+# - xbatcher
+# - xcape
 # - xgboost # binary packages for some language bindings, NVIDIA GPU support 
 #- xhistogram # Fast, flexible, label-aware histograms for numpy and xarray 
- - xmitgcm
+# - xmitgcm
 # - xpublish # serve xarray over http 
- - xrft # the discrete Fourier transform (DFT) on xarray and dask arrays 
- - xxhash # Extremely fast Hash algorithm, processing at RAM speed limits 
+# - xrft # the discrete Fourier transform (DFT) on xarray and dask arrays 
+# - xxhash # Extremely fast Hash algorithm, processing at RAM speed limits 
  - zarr

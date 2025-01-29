@@ -31,7 +31,6 @@ packages = [
     # jupyterhub and related utilities
     'ipykernel',
     'jupyterhub', 'jupyterlab', 
-    'jupyter_offlinenotebook',
     'nbgitpuller', 
     'smart_open',
     # 'nbzip',
@@ -41,10 +40,11 @@ packages = [
     'hapiclient',
     'hapiplot',
     'kamodo',
-    'plasmapy', 'pyspedas', 'spacepy', 'sunpy',
-    'sunpy_soar', 'sunkit_image', 
-    'pysat', 
-    #'pysatSeasons', 'pysatNASA', 'pysatMissions',
+    'plasmapy', 
+    'pyspedas', 
+    'spacepy', 
+    'sunpy', 'sunpy_soar', 'sunkit_image', 
+#    'pysat', 
     # other critical packages 
     'astroquery',
     'apexpy', 'aacgmv2', 
@@ -56,7 +56,7 @@ packages = [
     'ocbpy',
     #'OMMBV',
     'solarmach',
-    'speasy',
+#    'speasy',
     'tensorflow',
     'viresclient',
     ]
