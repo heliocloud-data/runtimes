@@ -1,7 +1,8 @@
-#ARG PANGEO_BASE_IMAGE_TAG=2024.02.27
-ARG PANGEO_BASE_IMAGE_TAG=2022.09.21
+#ARG PANGEO_BASE_IMAGE_TAG=2024.06.28
+ARG PANGEO_BASE_IMAGE_TAG=2024.01.15
 FROM pangeo/base-image:${PANGEO_BASE_IMAGE_TAG}
 
+LABEL org.opencontainers.image.source=https://github.com/heliocloud-data/runtimes
 
 USER root
 # - upgrade environment (probably should be in helio-base?)
@@ -30,9 +31,6 @@ RUN set -ex \
 # install CDFLIB
 RUN sh install_cdflib.sh
 ENV CDF_LIB=/usr/lib64/cdf/lib
-
-# jupyterlab-s3 browser 
-COPY --chown=1000:1000 jupyterlab_s3_browser.json /srv/conda/envs/$CONDA_ENV/etc/jupyter/jupyter_notebook_config.d/
 
 # Install some PyHC packages directly here.
 RUN pip install --no-cache-dir spacepy --no-build-isolation && \
@@ -64,3 +62,4 @@ CMD /usr/bin/chown $NB_USER.$NB_USER -R $HOME
 CMD $conda init bash
 
 USER root
+

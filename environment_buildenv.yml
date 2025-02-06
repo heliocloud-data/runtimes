@@ -5,5 +5,5 @@ channels:
  - nodefaults
 dependencies:
  - conda-lock
- - python
+ - python==3.12
  - pip

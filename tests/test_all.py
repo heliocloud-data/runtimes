@@ -31,19 +31,20 @@ packages = [
     # jupyterhub and related utilities
     'ipykernel',
     'jupyterhub', 'jupyterlab', 
-    'jupyter_offlinenotebook',
     'nbgitpuller', 
-    'nbzip',
+    'smart_open',
+    # 'nbzip',
     # aws/storage stuff
     'boto3', 's3fs', 'kerchunk', 'h5py', 'xarray', 'zarr',
     # pyhc core 
     'hapiclient',
     'hapiplot',
     'kamodo',
-    'plasmapy', 'pyspedas', 'spacepy', 'sunpy',
-    'sunpy_soar', 'sunkit_image', 
-    'pysat', 
-    #'pysatSeasons', 'pysatNASA', 'pysatMissions',
+    'plasmapy', 
+    'pyspedas', 
+    'spacepy', 
+    'sunpy', 'sunpy_soar', 'sunkit_image', 
+#    'pysat', 
     # other critical packages 
     'astroquery',
     'apexpy', 'aacgmv2', 
@@ -53,9 +54,10 @@ packages = [
     'geospacepy',
     'netCDF4',
     'ocbpy',
-    'OMMBV',
+    #'OMMBV',
     'solarmach',
-    'speasy',
+#    'speasy',
+    'tensorflow',
     'viresclient',
     ]
 
