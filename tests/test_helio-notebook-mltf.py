@@ -6,6 +6,8 @@ import os
 packages = [
     # key packages
     'tensorflow', 
+    'keras',
+    'keras_cv',
     'jax'
     ]
 
