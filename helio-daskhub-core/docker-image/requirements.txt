@@ -5,7 +5,7 @@ apexpy==2.0.1
 astroquery==0.4.7
 ai.cs==1.0.7
 ccdproc==2.4.2
-cloudcatalog==1.0.0
+cloudcatalog==1.0.2
 geospacepy==0.2.2
 gwcs==0.21.0
 hapiplot==0.2.2
