@@ -47,6 +47,7 @@ dependencies:
  - nbgitpuller
  - nodejs
  - python-magic # magic_open
+ - pipenv
  - py-spy # load testing req
  - sgp4
 # - smart_open
