@@ -12,6 +12,7 @@ gcc-multilib
 gfortran
 git
 groff
+lftp
 libc6-dev
 libstdc++6
 nano
